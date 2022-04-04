@@ -27,8 +27,16 @@ body {
     background-color: #FA2759;
 }
 
+.color-primary {
+    color: #FA2759;
+}
+
 .bg-secondary {
     background-color: #2DFCD8;
+}
+
+.color-secondary {
+    color: #2DFCD8;
 }
 
 .bg-grey {
@@ -43,6 +51,7 @@ body {
     color: #2DFCD8;
     border: 1px solid #2DFCD8;
     font-size: 1.125rem;
+    background-color: transparent;
     cursor: pointer;
     &:hover {
         background-color: #2DFCD8;
@@ -57,6 +66,7 @@ body {
     color: #FA2759;
     border: 1px solid #FA2759;
     font-size: 1.125rem;
+    background-color: transparent;
     cursor: pointer;
     &:hover {
         background-color: #FA2759;

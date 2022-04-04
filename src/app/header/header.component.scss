@@ -1,0 +1,46 @@
+.header-outer {
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        margin: 0;
+        color: white;
+        line-height: 1.4;
+    }
+    button {
+        padding: 1rem 4rem;
+    }
+
+}
+
+.img-max-outer {
+    background-color: #2DFCD8;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 18.5rem;
+    height: 18.5rem;
+    img {
+        width: 17.5rem;
+        margin-left: 1.3rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+.arrow-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 3rem;
+        cursor: pointer;
+    }
+}
