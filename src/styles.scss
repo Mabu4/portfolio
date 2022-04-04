@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.primary-container {
+    padding: 0 6.5625rem;
+}
+
+.headline-1 {
+    font-size: 4rem;
+}
+
+.headline-2 {
+    font-size: 2.25rem;
+}
+
+.paragraph {
+    font-size: 1.125rem;
+}
+
+.bg-primary {
+    background-color: #FA2759;
+}
+
+.bg-secondary {
+    background-color: #2DFCD8;
+}
+
+.bg-grey {
+    background-color: #1A1A1A;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.button-green {
+    color: #2DFCD8;
+    border: 1px solid #2DFCD8;
+    font-size: 1.125rem;
+    cursor: pointer;
+    &:hover {
+        background-color: #2DFCD8;
+        color: white;
+    }
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.button-red {
+    color: #FA2759;
+    border: 1px solid #FA2759;
+    font-size: 1.125rem;
+    cursor: pointer;
+    &:hover {
+        background-color: #FA2759;
+        color: white;
+    }
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.margin-top-xs {
+    margin-top: 0.75rem;
+}
+
+.margin-top-s {
+    margin-top: 1.5rem;
+}
+
+.margin-top-l {
+    margin-top: 2.5rem;
+}
+
+.margin-top-m {
+    margin-top: 3.375rem;
+}
+
+.margin-top-xl {
+    margin-top: 3.75rem;
+}
+
+.margin-top-xxl {
+    margin-top: 6.5625rem;
+}
