@@ -12,10 +12,8 @@ export class MyWorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadProjects();
+    this.loadProjects(0, 4);
   }
-
-  projectsContainer = '';
 
   angular = 
   [
@@ -30,6 +28,7 @@ export class MyWorkComponent implements OnInit {
       'image': 'team.jpg'
     }
   ];
+  
   javascript = 
   [
     {
@@ -45,26 +44,37 @@ export class MyWorkComponent implements OnInit {
   ];
 
   projects = this.angular.concat(this.javascript);
-  end = 4;
-  start = 0;
 
-  loadProjects(){
-    console.log(this.projects);
+  projectsContainer = '';
 
-    for (let i = this.start; i < this.end; i++) {
+  loadProjects(start, end){
+    this.projectsContainer = '';
+  
+    for (let i = start; i < end; i++) {
       let project = this.projects[i];
-      
-      this.projectsContainer += /*html*/`
-      <div class="project-element">
-        <img src="../../assets/img/projects/${project['image']}">
-        <div class="project-hover-overlay">
-          <h3 class="paragraph color-primary padding-bottom-xs">${project['name']}</h3>
-          <p class="paragraph padding-bottom-l">${project['description']}</p>
-          <a class="button-red">Try out</a>
-        </div>
-      </div>
-    `;
+      this.projectsContainer += 
+      this.renderHTML(project);
     }
   }
+
+  changeProjects(newStart, newEnd){
+    let start = newStart;
+    let end = newEnd;
+    this.loadProjects(start, end);
+  }
+
+  renderHTML(project){
+    return `
+    <div class="project-element">
+      <img src="../../assets/img/projects/${project['image']}">
+      <div class="project-hover-overlay">
+        <h3 class="paragraph color-primary padding-bottom-xs">${project['name']}</h3>
+        <p class="paragraph padding-bottom-l">${project['description']}</p>
+        <a class="button-red">Try out</a>
+      </div>
+    </div>
+  `;
+  }
+
 }
 
