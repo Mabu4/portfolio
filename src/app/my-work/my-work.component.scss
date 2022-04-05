@@ -1,0 +1,64 @@
+
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    button {
+        padding: 1rem 0;
+        width: 8rem;
+        margin: 0 0.2rem;
+    }
+}
+
+.projects-container {
+    width: 52rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-element {
+    width: 24rem;
+    margin: 1rem;
+    position: relative;
+    img {
+        display: block;
+        width: 100%;
+        height: 22rem;
+        object-fit: cover;
+
+    }
+}
+
+.project-hover-overlay {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.747);
+    &:hover {
+        animation: becomeVisible 225ms ease-in-out 0s 1 normal both;
+    }
+    a {
+        color: #FA2759;
+        padding: 0.75rem 1.5rem;
+        background-color: white;
+    }
+}
+
+@keyframes becomeVisible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

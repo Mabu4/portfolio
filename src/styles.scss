@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -13,14 +17,20 @@ body {
 
 .headline-1 {
     font-size: 4rem;
+    font-weight: 500;
 }
 
 .headline-2 {
     font-size: 2.25rem;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    text-align: center;
 }
 
 .paragraph {
     font-size: 1.125rem;
+    margin: 0;
 }
 
 .bg-primary {
@@ -63,7 +73,7 @@ body {
 }
 
 .button-red {
-    color: #FA2759;
+    color: white;
     border: 1px solid #FA2759;
     font-size: 1.125rem;
     background-color: transparent;
