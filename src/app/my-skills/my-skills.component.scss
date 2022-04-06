@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     div {
         position: absolute;
         display: flex;
@@ -33,5 +34,71 @@
     }
     img {
         height: 1.5rem;
+    }
+}
+
+@media(max-width:60em) {
+    .skills {
+        padding-bottom: 0;
+    }
+    .skill-cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30rem;
+        margin: 0 auto;
+        
+    }
+    .skill-card-element {
+        width: 8rem;
+        height: 5.5rem;
+        margin: 2rem 0.75rem;
+    }
+    p {
+        padding: 0.75rem 0.25rem 0rem 0.25rem;
+    }
+}
+
+@media(max-width:35em){
+
+    .skill-cards {
+        width: 21rem;
+    }
+    .skill-card-element {
+        width: 6rem;
+        height: 4.5rem;
+        margin: 1.5rem 0.5rem;
+        div {
+            width: 2rem;
+            height: 2rem;
+            top: -1rem;
+        }
+        img {
+            height: 1rem;
+        }
+        p {
+            font-size: 1rem;
+            padding: 0.6rem 0.25rem 0rem 0.25rem;
+        }
+    }
+}
+
+@media(max-width: 25em){
+    .skill-cards {
+        width: 18.75rem;
+    }
+    .skill-card-element {
+        width: 5.75rem;
+        height: 4rem;
+        margin: 1rem 0.25rem;
+        div {
+            width: 2rem;
+            height: 2rem;
+            top: -1rem;
+        }
+        img {
+            height: 1rem;
+        }
+        
     }
 }

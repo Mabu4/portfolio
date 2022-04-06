@@ -1,10 +1,11 @@
 <div class="bg-black navbar">
     <div class="navbar-container primary-container padding-top-s padding-bottom-s">
-        <img src="../../assets/img/logo.png">
-        <div>
+        <img class="navbar-img-logo" src="../../assets/img/logo.png">
+        <div id="menu">
             <a href="#">HOME</a>
-            <a href="#">ABOUT</a>
-            <a href="#">PORTFOLIO</a>
+            <a href="#about">ABOUT</a>
+            <a href="#my-work">PORTFOLIO</a>
         </div>
+        <img (click)="openMenu()" class="navbar-img-menu" src="../../assets/img/menu.png">
     </div>
 </div>

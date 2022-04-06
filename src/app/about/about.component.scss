@@ -8,7 +8,7 @@
         line-height: 1.4;
     }
     h2 {
-        font-weight: 400;
+        font-weight: 500;
     }
 }
 
@@ -38,6 +38,8 @@
 .about-second-section {
     display: flex;
     justify-content: center;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
 }
 
 .about-card {
@@ -68,12 +70,91 @@
 .icon-outer {
     background-color: #2DFCD8;
     border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 6rem;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
         width: 1.75rem;
+    }
+}
+
+@media(max-width: 75em){
+    .about-second-section {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    .split-line {
+        padding: 0 10rem; 
+    }
+    .about-card {
+        width: 50%;
+        margin: 0;
+        padding: 0 2rem 2rem 2rem;
+    }
+}
+
+@media(max-width: 70em){
+    .about-first-section {
+        padding-top: 5rem;
+    }
+    .about-second-section {
+        padding-bottom: 0;
+    }
+    #about {
+        padding-bottom: 0;
+    }
+}
+
+@media(max-width: 65em){
+    .about-second-section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media(max-width: 45em){
+    .split-line {
+        display: none;
+    }
+    .about-first-section {
+        flex-direction: column;
+        p{
+            padding: 0 1.5rem 0 1.5rem;
+            text-align: center;
+        }
+        h2 {
+            padding-bottom: 0.75rem;
+        }
+        br {
+            display: none;
+        }
+    }
+    .about-img-outer {
+        margin-right: 0rem;
+        margin-bottom: 2.5rem;
+    }
+    .about-second-section {
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .split-line {
+        padding: 0 10rem; 
+    }
+    .about-card {
+        width: 100%;
+        padding: 0 0rem 2rem 0rem;
+    }
+    .icon-outer {
+        width: 5rem;
+        height: 5rem;
     }
 }

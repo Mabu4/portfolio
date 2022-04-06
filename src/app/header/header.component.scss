@@ -23,6 +23,8 @@
     border-radius: 50%;
     width: 18.5rem;
     height: 18.5rem;
+    margin-left: 2rem;
+    flex-shrink: 0;
     img {
         width: 17.5rem;
         margin-left: 1.3rem;
@@ -42,5 +44,54 @@
     img {
         width: 3rem;
         cursor: pointer;
+    }
+}
+
+@media(max-width: 60em){
+    .header {
+        flex-direction: column-reverse;
+        padding-top: 3rem;
+        h1 {
+            margin-top: -2rem;
+        }
+    }
+    .img-max-outer {
+        margin-left: 0;
+    }
+    .header-outer {
+        height: inherit;
+        padding-bottom: 2.5rem;
+    }
+    .arrow-container {
+        display: none;
+    }
+    .header-button {
+        display: flex;
+        justify-content: center;
+    }
+    .img-max-outer {
+        width: 13rem;
+        height: 13rem;
+        margin: 0;
+        img {
+            width: 12rem;
+        }
+        
+    }
+}
+
+@media(max-width: 30em){
+    .header {
+        padding-top: 4rem;
+    }
+    .img-max-outer {
+        width: 9rem;
+        height: 9rem;
+        margin: 0;
+        img {
+            width: 8rem;
+            margin-left: 0.9rem;
+        }
+        
     }
 }

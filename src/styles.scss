@@ -6,13 +6,37 @@ a {
     text-decoration: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 .primary-container {
-    padding: 0 7.5rem;
+    padding-left: 7.5rem;
+    padding-right: 7.5rem;
+}
+
+@media(max-width:55em){
+    .primary-container {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+@media(max-width:45em){
+    .primary-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+@media(max-width:35em){
+    .primary-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 
 .headline-1 {
@@ -135,3 +159,25 @@ body {
 .padding-bottom-xxl {
     padding-bottom: 6.5625rem;
 }
+
+@media(max-width: 75em){
+    .headline-1 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .bg-black {
+        background-color: #1A1A1A;
+    }
+}
+
+@media(max-width: 30em){
+    .headline-1 {
+        font-size: 2.1rem;
+    }
+    .headline-2 {
+        font-size: 2.1rem;
+    }
+}
+
+
+

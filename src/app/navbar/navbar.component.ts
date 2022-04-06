@@ -12,4 +12,17 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  menuIsOpen = false;
+
+  openMenu() {
+
+    if(!this.menuIsOpen){
+      document.getElementById('menu').style.transform = 'scaleY(1.0)';
+      this.menuIsOpen = true;
+    } else if (this.menuIsOpen) {
+      document.getElementById('menu').style.transform = 'scaleY(0.0)';
+      this.menuIsOpen = false;
+    }
+  }
+
 }

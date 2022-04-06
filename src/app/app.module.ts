@@ -10,6 +10,8 @@ import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ImprintAndPrivacyComponent } from './imprint-and-privacy/imprint-and-privacy.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './footer/footer.component';
     MyWorkComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintAndPrivacyComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
