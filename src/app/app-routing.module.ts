@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -9,7 +10,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes, {
+      // Restore the last scroll position
+      scrollPositionRestoration: "enabled",
+      scrollOffset: [0, 0],
+      // Enable scrolling to anchors
+      anchorScrolling: "enabled",
+    })
+  ],
 })
 export class AppRoutingModule { }

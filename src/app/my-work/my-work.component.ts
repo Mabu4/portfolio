@@ -12,15 +12,33 @@ export class MyWorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadProjects(0, 4);
+    this.loadProjects(0, 8);
   }
+
+  website = 
+  [
+    {
+      'name': 'UMA',
+      'description': 'Adventure Website',
+      'image': 'uma.jpg',
+      'url': '/projects/uma/index.html'
+    },
+    {
+      'name': 'Jouline Cutner',
+      'description': 'Art on canvas',
+      'image': 'jouline.jpg',
+      'url': 'http://www.jouline-cutner.de'
+    },
+  ]
 
   angular = 
   [
     {
       'name': 'Portfolio',
       'description': 'Personal Webpage',
-      'image': 'man.jpg'
+      'image': 'man.jpg',
+      'url': '/projects/instakram/index.html'
+      
     },
     {
       'name': 'Join',
@@ -34,16 +52,42 @@ export class MyWorkComponent implements OnInit {
     {
       'name': 'El-Pollo-Loco',
       'description': 'Jump and run game',
-      'image': 'elpolloloco.png'
+      'image': 'elpolloloco.png',
+      'url': '/projects/el-pollo-loco/index.html'
     },
     {
       'name': 'Quizapp',
       'description': 'Developer Quiz',
-      'image': 'quizapp.png'
+      'image': 'quizapp.jpg',
+      'url': '/projects/quizapp/index.html'
+    },
+    {
+      'name': 'Instakram',
+      'description': 'Social Network',
+      'image': 'instakram.png',
+      'url': '/projects/instakram/index.html'
+    },
+    {
+      'name': 'Lieferblitz',
+      'description': 'Food Delivery',
+      'image': 'lieferblitz.jpg',
+      'url': '/projects/lieferblitz/index.html'
+    },
+    {
+      'name': 'Pokedex',
+      'description': 'API Project',
+      'image': 'pokedex.jpg',
+      'url': '/projects/pokedex/index.html'
+    },
+    {
+      'name': 'TicTacToe',
+      'description': 'Classic Game',
+      'image': 'tictactoe.jpg',
+      'url': '/projects/tictactoe/index.html'
     }
   ];
 
-  projects = this.angular.concat(this.javascript);
+  projects = this.website.concat(this.javascript);
 
   projectsContainer = '';
 
@@ -70,7 +114,7 @@ export class MyWorkComponent implements OnInit {
       <div class="project-hover-overlay">
         <h3 class="paragraph color-primary padding-bottom-xs">${project['name']}</h3>
         <p class="paragraph padding-bottom-l">${project['description']}</p>
-        <a class="button-red">Try out</a>
+        <a class="button-red" target="_blank" href="${project['url']}">Try out</a>
       </div>
     </div>
   `;
