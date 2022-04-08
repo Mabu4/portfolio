@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { ImprintAndPrivacyComponent } from './imprint-and-privacy/imprint-and-privacy.component';
 import { HomeComponent } from './home/home.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     ContactComponent,
     FooterComponent,
     ImprintAndPrivacyComponent,
-    HomeComponent
+    HomeComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,

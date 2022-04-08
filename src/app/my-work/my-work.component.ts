@@ -12,7 +12,7 @@ export class MyWorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.loadProjects(0, 6);
+    this.loadProjects(0, 5);
   }
 
   website = 
@@ -56,14 +56,8 @@ export class MyWorkComponent implements OnInit {
       'url': '/projects/el-pollo-loco/index.html'
     },
     {
-      'name': 'Quizapp',
-      'description': 'JS-App',
-      'image': 'quizapp.jpg',
-      'url': '/projects/quizapp/index.html'
-    },
-    {
       'name': 'Lieferblitz',
-      'description': 'JS-App',
+      'description': 'small copy of Lieferando Frontend with HTML, CSS, JS',
       'image': 'lieferblitz.jpg',
       'url': '/projects/lieferblitz/index.html'
     },

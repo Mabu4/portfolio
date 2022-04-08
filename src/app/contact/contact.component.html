@@ -8,16 +8,16 @@
                     max.budziat@gmx.de
                 </a>
             </p>
-            <form action="">
+            <form action="../../assets/send_mail/send_mail.php" name="form" method="post" onsubmit="return validateForm()" required>
                 <div class="form-container">
                     <label class="padding-bottom-s padding-top-s paragraph" for="name">Name</label>
                     <input type="text" name="name" id="name" placeholder="Enter your name">
                     <label class="padding-bottom-s padding-top-s paragraph" for="email">Email address</label>
                     <input type="email" name="email" id="email" placeholder="Enter your Email address">
-                    <label class="padding-bottom-s padding-top-s paragraph" for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Enter your message"></textarea>
+                    <label class="padding-bottom-s padding-top-s paragraph" for="text">Message</label>
+                    <textarea name="text" id="text" placeholder="Enter your message"></textarea>
                     <div>
-                        <button class="button-green paragraph">Send</button>
+                        <button type="submit" class="button-green paragraph">Send</button>
                     </div>
                 </div>
                 
