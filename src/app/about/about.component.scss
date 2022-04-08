@@ -27,7 +27,7 @@
 }
 
 .split-line {
-    padding: 0 14rem;
+    
     div {
         height: 1px;
         width: 100%;
@@ -38,13 +38,11 @@
 .about-second-section {
     display: flex;
     justify-content: center;
-    padding-left: 7.5rem;
-    padding-right: 7.5rem;
 }
 
 .about-card {
-    width: 16.5rem;
-    margin: 0 2rem;
+    width: calc(25% - 1.875rem);
+    margin: 0 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,25 +78,26 @@
     }
 }
 
-@media(max-width: 75em){
+@media(max-width: 80em){
     .about-second-section {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-    .split-line {
-        padding: 0 10rem; 
     }
     .about-card {
-        width: 50%;
-        margin: 0;
-        padding: 0 2rem 2rem 2rem;
+        width: calc(50% - 1.5rem);
+    }
+    .about-card-1, .about-card-3 {
+        margin: 0 1.5rem 0 0;
+        margin-bottom: 3rem;
+    }
+    .about-card-2, .about-card-4 {
+        margin: 0 0 0 1.5rem;
+        margin-bottom: 3rem;
     }
 }
 
-@media(max-width: 70em){
+@media(max-width: 75em){
     .about-first-section {
         padding-top: 5rem;
     }
@@ -107,13 +106,6 @@
     }
     #about {
         padding-bottom: 0;
-    }
-}
-
-@media(max-width: 65em){
-    .about-second-section {
-        padding-left: 2rem;
-        padding-right: 2rem;
     }
 }
 
@@ -143,15 +135,10 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-    .split-line {
-        padding: 0 10rem; 
     }
     .about-card {
         width: 100%;
-        padding: 0 0rem 2rem 0rem;
+        margin: 0 0 3rem 0;
     }
     .icon-outer {
         width: 5rem;

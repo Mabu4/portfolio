@@ -37,10 +37,14 @@
     }
 }
 
-@media(max-width:60em) {
+@media(max-width:75em) {
     .skills {
-        padding-bottom: 0;
+        padding-bottom: 3.75rem;
+        padding-top: 0;
     }
+}
+
+@media(max-width:60em) {
     .skill-cards {
         display: flex;
         justify-content: center;

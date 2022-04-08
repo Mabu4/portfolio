@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 2rem;
     h1 {
         margin: 0;
         color: white;
@@ -37,7 +38,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 6.5625rem;
+    bottom: 5.75rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +61,7 @@
     }
     .header-outer {
         height: inherit;
-        padding-bottom: 2.5rem;
+        padding-bottom: 5.75rem;
     }
     .arrow-container {
         display: none;
