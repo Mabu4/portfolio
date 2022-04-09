@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -10,9 +10,29 @@ export class MySkillsComponent implements OnInit {
 
   constructor() { }
 
+  
+
   ngOnInit(): void {
     this.loadCards();
+    this.trackForAnimations();
   }
+  
+
+  trackForAnimations(){
+    let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        console.log(entry);
+        // If the element is visible
+        //if (entry.isIntersecting) {
+          // Add the animation class
+          
+        //}
+      });
+    });
+    let skillCard = document.querySelector('.skill-card-1');
+    observer.observe(skillCard);
+  }
+
 
   images = 
   [
@@ -48,7 +68,7 @@ export class MySkillsComponent implements OnInit {
 
       this.cardContainer += /*html*/`
       
-      <div class="skill-card-element">
+      <div class="skill-card-element skill-card-${i + 1}">
         <div class="skill-card-img-outer">
           <img src="../../assets/img/${image}" alt="">
         </div>
@@ -58,9 +78,6 @@ export class MySkillsComponent implements OnInit {
       </div>
       `;
     }
-
-    
-
   }
 
 }

@@ -3,6 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    span {
+        opacity: 0.6;
+    }
 
     a {
         text-decoration: none;

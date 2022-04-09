@@ -95,6 +95,7 @@ body {
     font-size: 1.125rem;
     background-color: transparent;
     cursor: pointer;
+    transition: 200ms ease-in-out;
     &:hover {
         background-color: #2DFCD8;
         color: white;
@@ -110,6 +111,7 @@ body {
     font-size: 1.125rem;
     background-color: transparent;
     cursor: pointer;
+    transition: 200ms ease-in-out;
     &:hover {
         background-color: #FA2759;
         color: white;

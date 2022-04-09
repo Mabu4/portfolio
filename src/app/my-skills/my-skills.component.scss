@@ -37,6 +37,31 @@
     }
 }
 
+.skill-card-1, .skill-card-4, .skill-card-7 {
+    animation: flyIn 600ms ease-in-out 0s 1 normal forwards;
+}
+
+.skill-card-2, .skill-card-5, .skill-card-8 {
+    animation: flyIn 600ms ease-in-out 200ms 1 normal forwards;
+}
+
+.skill-card-3, .skill-card-6, .skill-card-9 {
+    animation: flyIn 600ms ease-in-out 350ms 1 normal forwards;
+}
+
+@keyframes flyIn {
+    from {
+        transform: translateX(- 5rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
 @media(max-width:75em) {
     .skills {
         padding-bottom: 3.75rem;

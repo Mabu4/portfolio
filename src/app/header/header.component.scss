@@ -43,8 +43,13 @@
     justify-content: center;
     align-items: center;
     img {
+        opacity: 0.6;
         width: 3rem;
         cursor: pointer;
+        transition: 125ms ease-in-out;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
 
