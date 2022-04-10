@@ -3,8 +3,15 @@
         <h2 class="headline-2 padding-bottom-l">
             MY Skills
         </h2>
-        <div [innerHTML]="cardContainer" class="skill-cards" id="skill-cards">
-
+        <div class="skill-cards" id="skill-cards">
+            <div *ngFor="let image of images; let i = index" class="skill-card-element skill-card-{{i + 1}}" >
+                <div class="skill-card-img-outer">
+                  <img src="../../assets/img/{{image}}" alt="">
+                </div>
+                <p class="paragraph">
+                  {{descriptions[i]}}
+                </p>
+              </div>
         </div>
     </div>
 
