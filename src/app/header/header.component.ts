@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
+  }
+
+  onIntersectionFlyRight({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'flyInRight': '');
+  }
+
+  onIntersectionFlyLeft({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'flyInLeft': '');
+  }
+
+  onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'becomeVisibleLighter': '');
   }
 
 }

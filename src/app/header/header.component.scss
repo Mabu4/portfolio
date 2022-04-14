@@ -11,9 +11,13 @@
         margin: 0;
         color: white;
         line-height: 1.4;
+        transform: translateX(- 7.5rem);
+        opacity: 0;
     }
     button {
         padding: 1rem 4rem;
+        transform: translateX(- 7.5rem);
+        opacity: 0;
     }
 
 }
@@ -26,6 +30,8 @@
     height: 18.5rem;
     margin-left: 2rem;
     flex-shrink: 0;
+    transform: translateX(+ 7.5rem);
+    opacity: 0;
     img {
         width: 17.5rem;
         margin-left: 1.3rem;
@@ -51,14 +57,13 @@
         justify-content: center;
     }
     img {
-        opacity: 0.4;
+        
         display: block;
         width: 3rem;
         cursor: pointer;
         transition: 125ms ease-in-out;
         &:hover {
-            opacity: 1;
-            animation: none;
+            opacity: 0.9 !important;
         }
     }
 }

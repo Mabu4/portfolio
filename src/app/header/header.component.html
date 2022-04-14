@@ -2,23 +2,23 @@
 <div class="header-outer bg-black padding-top-xxl">
     <div class="header primary-container">
         <div>
-            <h1 class="headline-1 padding-top-s">
+            <h1 class="headline-1 padding-top-s" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyLeft($event)">
                 Hi, <br>
                 I&rsquo;m <span class="color-secondary">Max</span> Budziat <br>
                 Front End develop<span class="color-primary">e</span>r
             </h1>
             <div class="padding-top-m header-button">
-                <button class="button-green">
+                <button class="button-green" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyLeft($event)">
                     Contact me
                 </button>
             </div>
         </div>
-        <div class="img-max-outer">
+        <div class="img-max-outer" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyRight($event)">
             <img src="../../assets/img/max.png">
         </div>
     </div>
     <div class="arrow-container primary-container padding-top-m">
-        <a class="pulse" href="#my-skills"><img  href="" src="../../assets/img/arrow-down.png"></a>
+        <a class="pulse" href="#my-skills"><img  href="" src="../../assets/img/arrow-down.png" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)"></a>
     </div>
 </div>
 

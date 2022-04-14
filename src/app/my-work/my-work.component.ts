@@ -136,9 +136,7 @@ export class MyWorkComponent implements OnInit {
     this.renderer.addClass(target, visible ? 'becomeVisible': '');
   }
 
-  onIntersectionButton({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'buttonsBecomeVisible': '');
-  }
+
 
   renderHTML(project, i){
     return /*html*/`
