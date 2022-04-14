@@ -1,13 +1,13 @@
 <div class="bg-grey" id="about">
     <div class="about-first-section padding-top-xl padding-bottom-xl primary-container">
-        <div class="about-img-outer">
+        <div class="about-img-outer" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyLeft($event)">
             <img src="../../assets/img/max.png">
         </div>
         <div>
-            <h2 class="headline-2 padding-bottom-s">
+            <h2 class="headline-2 padding-bottom-s" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyRight($event)">
                 About me.
             </h2>
-            <p class="paragraph">
+            <p class="paragraph" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyRight($event)">
                 " I'm an ambitious programmer and I love <br>targeted project work with new challenges "
             </p>
         </div>
@@ -16,7 +16,7 @@
         <div></div>
     </div>
     <div class="about-second-section padding-top-xxl padding-bottom-xxl primary-container">
-        <div class="about-card about-card-1">
+        <div class="about-card about-card-1" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyLeft($event)">
             <div class="icon-outer">
                 <img src="../../assets/img/walk-line.svg">
             </div>
@@ -27,7 +27,7 @@
                 numerous opportunities for digitization.
             </p>
         </div>
-        <div class="about-card about-card-2">
+        <div class="about-card about-card-2" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyLeftLater($event)">
             <div class="icon-outer">
                 <img src="../../assets/img/search-line.svg">
             </div>
@@ -37,7 +37,7 @@
                 with programs and implementing ideas for my own projects.
             </p>
         </div>
-        <div class="about-card about-card-3">
+        <div class="about-card about-card-3" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyRightLater($event)">
             <div class="icon-outer">
                 <img src="../../assets/img/heart-line.svg">
             </div>
@@ -47,7 +47,7 @@
                 always very interested in logical processes and mathematics.
             </p>
         </div>
-        <div class="about-card about-card-4">
+        <div class="about-card about-card-4" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersectionFlyRight($event)">
             <div class="icon-outer">
                 <img src="../../assets/img/flight-takeoff-line.svg">
             </div>

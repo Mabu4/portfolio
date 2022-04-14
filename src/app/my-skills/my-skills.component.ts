@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -9,7 +9,12 @@ import { Component, ViewEncapsulation, OnInit} from '@angular/core';
 
 export class MySkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
+
+  onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'card-animation': '');
+    //this.renderer.removeClass(target, visible ? 'inactive' : 'active');
+}
 
   ngOnInit(): void {   
   }
@@ -38,6 +43,17 @@ export class MySkillsComponent implements OnInit {
     'Test automation',
     'Databases'
   ];
+
+
+
+
+  
+  // window.onscroll = function(ev) {
+  //     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+  //         // you're at the bottom of the page
+  //     }
+  // };
+  
 
 }
 

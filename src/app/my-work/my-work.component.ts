@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit} from '@angular/core';
+import { Component, ViewEncapsulation, OnInit, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-my-work',
@@ -9,10 +9,10 @@ import { Component, ViewEncapsulation, OnInit} from '@angular/core';
 
 export class MyWorkComponent implements OnInit {
 
-  constructor() { }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    this.loadProjects(0, 5);
+    this.loadProjects(0, 6);
   }
 
   website = 
@@ -35,16 +35,18 @@ export class MyWorkComponent implements OnInit {
   [
     {
       'name': 'Portfolio',
-      'description': 'Personal Webpage',
-      'image': 'man.jpg',
-      'url': '/projects/instakram/index.html'
-      
+      'description': 'Angular based Webpage',
+      'image': 'portfolio.jpg',
+      'url': 'www.web-site24.de'
     },
+    /*
     {
-      'name': 'Join',
-      'description': 'Team Project',
-      'image': 'team.jpg'
+      'name': 'Ring of Fire',
+      'description': 'Angular-based web-app with multiplayer function',
+      'image': 'cards.jpg',
+      'url': '/projects/ring-of-fire/index.html'
     }
+    */
   ];
   
   javascript = 
@@ -69,7 +71,7 @@ export class MyWorkComponent implements OnInit {
     },
   ];
 
-  projects = this.website.concat(this.javascript);
+  projects = [...this.website, ...this.angular, ...this.javascript];
 
   projectsContainer = '';
 
@@ -89,9 +91,58 @@ export class MyWorkComponent implements OnInit {
     this.loadProjects(start, end);
   }
 
+
+  changeButton(type){
+    this.resetButtons(type);
+    if(type == 'all'){
+      document.getElementById('button-1').classList.add('button-red-active');
+    }
+    if(type == 'html'){
+      document.getElementById('button-2').classList.add('button-red-active');
+    }
+    if(type == 'angular'){
+      document.getElementById('button-3').classList.add('button-red-active');
+    }
+    if(type == 'javascript'){
+      document.getElementById('button-4').classList.add('button-red-active');
+    }
+  }
+
+
+  resetButtons(type){
+    if(type == 'all'){
+      document.getElementById('button-2').classList.remove('button-red-active');
+      document.getElementById('button-3').classList.remove('button-red-active');
+      document.getElementById('button-4').classList.remove('button-red-active');
+    }
+    if(type == 'html'){
+      document.getElementById('button-1').classList.remove('button-red-active');
+      document.getElementById('button-3').classList.remove('button-red-active');
+      document.getElementById('button-4').classList.remove('button-red-active');
+    }
+    if(type == 'angular'){
+      document.getElementById('button-1').classList.remove('button-red-active');
+      document.getElementById('button-2').classList.remove('button-red-active');
+      document.getElementById('button-4').classList.remove('button-red-active');
+    }
+    if(type == 'javascript'){
+      document.getElementById('button-1').classList.remove('button-red-active');
+      document.getElementById('button-2').classList.remove('button-red-active');
+      document.getElementById('button-3').classList.remove('button-red-active');
+    }
+  }
+
+  onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'becomeVisible': '');
+  }
+
+  onIntersectionButton({ target, visible }: { target: Element; visible: boolean }): void {
+    this.renderer.addClass(target, visible ? 'buttonsBecomeVisible': '');
+  }
+
   renderHTML(project, i){
-    return `
-    <div class="project-element projects-element-${i}">
+    return /*html*/`
+    <div class="project-element projects-element-${i}" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">
       <img src="../../assets/img/projects/${project['image']}">
       <div class="project-hover-overlay">
         <h3 class="paragraph color-primary padding-bottom-xs">${project['name']}</h3>

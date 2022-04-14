@@ -11,6 +11,8 @@
 
 .skill-card-element {
     background-color: white;
+    transform: translateX(- 5rem);
+    opacity: 0;
     width: 10rem;
     height: 6.5rem;
     margin: 2rem 1rem;
@@ -36,23 +38,17 @@
         height: 1.5rem;
     }
 }
+/*
 @media (prefers-reduced-motion: no-preference) {
     .skill-card-animation {
         animation: flyIn 600ms ease-in-out 0s 1 normal forwards;
     }
 }
+*/
 
-@keyframes flyIn {
-    from {
-        transform: translateX(- 5rem);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.card-animation {
+    animation: flyInLeft 600ms ease-in-out 0s 1 normal forwards;
 }
-
 
 
 @media(max-width:75em) {

@@ -4,3 +4,4 @@
 [0410/203018.976:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
 [0410/203027.396:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
 [0410/203029.365:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)
+[0410/205423.912:ERROR:registration_protocol_win.cc(106)] CreateFile: Das System kann die angegebene Datei nicht finden. (0x2)

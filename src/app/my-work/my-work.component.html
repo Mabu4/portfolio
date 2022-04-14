@@ -1,10 +1,11 @@
 <div class="bg-black" id="my-work">
     <div class="work padding-top-xxl padding-bottom-xxl primary-container">
-        <h2 class="headline-2">MY Work</h2>
+        <h2 class="headline-2 headline-work" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">MY Work</h2>
         <div class="button-box padding-top-xl padding-bottom-l">
-            <button (click)="changeProjects(0, 5)" class="button-red">All</button>
-            <button (click)="changeProjects(0, 2)" class="button-red">HTML/CSS</button>
-            <button (click)="changeProjects(2, 5)" class="button-red">Java script</button>
+            <button (click)="changeProjects(0, 6); changeButton('all')" id="button-1" class="button-red button-red-active" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">All</button>
+            <button (click)="changeProjects(0, 2); changeButton('html')" id="button-2" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">HTML/CSS</button>
+            <button (click)="changeProjects(2, 3); changeButton('angular')" id="button-3" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Angular</button>
+            <button (click)="changeProjects(3, 6); changeButton('javascript')" id="button-4" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Java script</button>
         </div>
         <div class="projects-container" id="projects-container" [innerHTML]="projectsContainer">
 

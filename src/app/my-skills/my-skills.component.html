@@ -1,10 +1,10 @@
 <div class="bg-grey" id="my-skills">
     <div class="skills primary-container padding-top-l padding-bottom-xxl">
-        <h2 class="headline-2 padding-bottom-l">
+        <h2 id="headlineskill" class="headline-2 padding-bottom-l">
             MY Skills
         </h2>
         <div class="skill-cards" id="skill-cards">
-            <div *ngFor="let image of images; let i = index" class="skill-card-element skill-card-{{i + 1}}" >
+            <div *ngFor="let image of images; let i = index;" id="skillCard" class="skill-card-element skill-card-{{i + 1}}" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">
                 <div class="skill-card-img-outer">
                   <img src="../../assets/img/{{image}}" alt="">
                 </div>

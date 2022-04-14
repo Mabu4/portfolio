@@ -122,6 +122,75 @@ body {
     }
 }
 
+.button-red-active {
+    background-color: #FA2759;
+    color: white;
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+  
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}
+
+.becomeVisible{
+    animation: becomeVisible 600ms ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes becomeVisible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.flyInLeft {
+    animation: flyInLeft 800ms ease-in-out 0s 1 normal forwards;
+}
+
+.flyInLeftLater {
+    animation: flyInLeft 800ms ease-in-out 0.5s 1 normal forwards;
+}
+
+.flyInRight {
+    animation: flyInRight 800ms ease-in-out 0s 1 normal forwards;
+}
+
+.flyInRightLater {
+    animation: flyInRight 800ms ease-in-out 0.5s 1 normal forwards;
+}
+
+@keyframes flyInLeft {
+    0% {
+        transform: translateX(- 7.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        transform: translateX(+ 7.5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .padding-top-xs {
     padding-top: 0.75rem;
 }

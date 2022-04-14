@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImprintAndPrivacyComponent } from './imprint-and-privacy/imprint-and-privacy.component';
 import { HomeComponent } from './home/home.component';
 import { SuccessComponent } from './success/success.component';
+import { InViewportModule } from 'ng-in-viewport';
 
 @NgModule({
   declarations: [
@@ -30,8 +31,10 @@ import { SuccessComponent } from './success/success.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    InViewportModule
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

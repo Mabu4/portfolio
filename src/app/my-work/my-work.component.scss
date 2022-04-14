@@ -1,5 +1,9 @@
 
 
+.headline-work {
+    opacity: 0;
+}
+
 .button-box {
     display: flex;
     justify-content: center;
@@ -8,6 +12,7 @@
         padding: 1rem 0;
         width: 8rem;
         margin: 0 0.2rem;
+        opacity: 0;
     }
 }
 
@@ -61,14 +66,9 @@
         padding: 0.75rem 1.5rem;
         background-color: white;
     }
-}
-
-@keyframes becomeVisible {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+    p {
+        padding: 1rem 1rem;
+        text-align: center;
     }
 }
 
@@ -116,8 +116,10 @@
         }
     }
     .button-box {
+        flex-wrap: wrap;
         button {
-            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            width: calc(50% - 0.4rem);
         }
     }
 }
@@ -130,7 +132,8 @@
     }
     .button-box {
         button {
-            font-size: 0.85rem;
+            font-size: 1rem;
         }
     }
+
 }

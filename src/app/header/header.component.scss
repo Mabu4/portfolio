@@ -42,15 +42,39 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    a {
+        border-radius: 50%;
+        width: 2.8rem;
+        height: 2.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     img {
-        opacity: 0.6;
+        opacity: 0.4;
+        display: block;
         width: 3rem;
         cursor: pointer;
         transition: 125ms ease-in-out;
         &:hover {
             opacity: 1;
+            animation: none;
         }
     }
+}
+
+@keyframes pulsate {
+    0%{
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.4;
+    }
+
+    
 }
 
 @media(max-width: 60em){
