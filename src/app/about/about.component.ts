@@ -13,19 +13,19 @@ export class AboutComponent implements OnInit {
   }
 
   onIntersectionFlyLeft({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInLeft': '');
+    this.renderer.addClass(target, visible ? 'flyInLeft': 'inactive');
   }
 
   onIntersectionFlyLeftLater({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInLeftLater': '');
+    this.renderer.addClass(target, visible ? 'flyInLeftLater': 'inactive');
   }
 
   onIntersectionFlyRight({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInRight': '');
+    this.renderer.addClass(target, visible ? 'flyInRight': 'inactive');
   }
 
   onIntersectionFlyRightLater({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInRightLater': '');
+    this.renderer.addClass(target, visible ? 'flyInRightLater': 'inactive');
   }
 
 

@@ -13,15 +13,15 @@ export class HeaderComponent implements OnInit {
   }
 
   onIntersectionFlyRight({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInRight': '');
+    this.renderer.addClass(target, visible ? 'flyInRight': 'inactive');
   }
 
   onIntersectionFlyLeft({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'flyInLeft': '');
+    this.renderer.addClass(target, visible ? 'flyInLeft': 'inactive');
   }
 
   onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'becomeVisibleLighter': '');
+    this.renderer.addClass(target, visible ? 'becomeVisibleLighter': 'inactive');
   }
 
 }

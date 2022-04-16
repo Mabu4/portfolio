@@ -27,6 +27,7 @@
 .project-element {
     width: calc(50% - 1rem);
     position: relative;
+    opacity: 0;
     img {
         display: block;
         width: 100%;

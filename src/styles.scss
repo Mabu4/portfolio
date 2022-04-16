@@ -166,6 +166,10 @@ body {
     }
 }
 
+.inactive{
+    display: block;
+}
+
 .flyInLeft {
     animation: flyInLeft 800ms ease-in-out 0s 1 normal forwards;
 }

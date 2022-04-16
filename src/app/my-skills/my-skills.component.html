@@ -4,7 +4,7 @@
             MY Skills
         </h2>
         <div class="skill-cards" id="skill-cards">
-            <div *ngFor="let image of images; let i = index;" id="skillCard" class="skill-card-element skill-card-{{i + 1}}" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">
+            <div *ngFor="let image of images; let i = index;" id="skillCard" class="skill-card-element skill-card-{{i + 1}}" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event, i)">
                 <div class="skill-card-img-outer">
                   <img src="../../assets/img/{{image}}" alt="">
                 </div>

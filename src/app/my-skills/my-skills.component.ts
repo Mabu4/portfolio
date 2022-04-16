@@ -11,8 +11,14 @@ export class MySkillsComponent implements OnInit {
 
   constructor(private renderer: Renderer2) { }
 
-  onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
-    this.renderer.addClass(target, visible ? 'card-animation': '');
+  onIntersection({ target, visible }: { target: Element; visible: boolean }, i: number): void {
+    if(i === 0 || i === 1 || i === 2) {
+      this.renderer.addClass(target, visible ? 'flyInLeft': 'inactive');
+    } else if (i === 3 || i === 4 || i === 5){
+      this.renderer.addClass(target, visible ? 'flyInRight': 'inactive');
+    } else if (i === 6 || i === 7 || i === 8){
+      this.renderer.addClass(target, visible ? 'flyInLeft': 'inactive');
+    }
     //this.renderer.removeClass(target, visible ? 'inactive' : 'active');
 }
 

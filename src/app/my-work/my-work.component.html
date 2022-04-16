@@ -2,13 +2,20 @@
     <div class="work padding-top-xxl padding-bottom-xxl primary-container">
         <h2 class="headline-2 headline-work" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">MY Work</h2>
         <div class="button-box padding-top-xl padding-bottom-l">
-            <button (click)="changeProjects(0, 6); changeButton('all')" id="button-1" class="button-red button-red-active" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">All</button>
-            <button (click)="changeProjects(0, 2); changeButton('html')" id="button-2" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">HTML/CSS</button>
-            <button (click)="changeProjects(2, 3); changeButton('angular')" id="button-3" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Angular</button>
-            <button (click)="changeProjects(3, 6); changeButton('javascript')" id="button-4" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Java script</button>
+            <button (click)="changeProjects('all'); changeButton('all')" id="button-1" class="button-red button-red-active" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">All</button>
+            <button (click)="changeProjects('html'); changeButton('html')" id="button-2" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">HTML/CSS</button>
+            <button (click)="changeProjects('angular'); changeButton('angular')" id="button-3" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Angular</button>
+            <button (click)="changeProjects('javascript'); changeButton('javascript')" id="button-4" class="button-red" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">Java script</button>
         </div>
-        <div class="projects-container" id="projects-container" [innerHTML]="projectsContainer">
-
+        <div class="projects-container" id="projects-container">
+            <div *ngFor="let project of projects; let i = index; " class="project-element projects-element-{{i}}" inViewport [inViewportOptions]="{ threshold: [0] }" (inViewportAction)="onIntersection($event)">
+                <img src="../../assets/img/projects/{{project['image']}}">
+                <div class="project-hover-overlay">
+                  <h3 class="paragraph color-primary padding-bottom-xs">{{project['name']}}</h3>
+                  <p class="paragraph padding-bottom-l">{{project['description']}}</p>
+                  <a class="button-red" target="_blank" href="{{project['url']}}">Try it out</a>
+                </div>
+            </div>
         </div>
     </div>
 
