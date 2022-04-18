@@ -60,8 +60,9 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 0.747);
     &:hover {
-        animation: becomeVisible 225ms ease-in-out 0s 1 normal both;
+        animation: becomeVisible 125ms ease-in-out 0s 1 normal both;
     }
+    
     a {
         color: #FA2759;
         padding: 0.75rem 1.5rem;

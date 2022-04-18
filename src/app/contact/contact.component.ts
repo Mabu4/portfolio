@@ -12,16 +12,4 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  validateForm() {
-    let x = document.forms['form']['name'].value;
-    let y = document.forms['form']['email'].value;
-    let z = document.forms['form']['text'].value;
-    if (x == "" || y == "" || z == "") {
-      alert("Bitte Eingabefelder ausfüllen");
-      return false;
-    } else {
-      return true;
-    }
-}
-
 }

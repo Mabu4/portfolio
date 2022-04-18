@@ -14,12 +14,16 @@
         text-decoration: none;
         color: #2DFCD8;
     }
+    form {
+        width: 100%;
+    }
 }
 
 .form-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
     max-width: 50rem;
     label {
         color: white;
@@ -59,7 +63,7 @@
     div {
         display: flex;
         justify-content: flex-end;
-        width: 100%;
+        
     }
     button {
         margin-top: 1.5rem;

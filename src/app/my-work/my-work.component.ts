@@ -39,10 +39,10 @@ export class MyWorkComponent implements OnInit {
       'url': 'www.web-site24.de'
     },
     {
-      'name': 'Ring of Fire',
+      'name': 'The king is death',
       'description': 'Angular-based web-app with multiplayer function',
       'image': 'cards.jpg',
-      'url': 'https://ring-of-fire.web-site24.de'
+      'url': 'https://king-is-death.web-site24.de'
     }
 
   ];
