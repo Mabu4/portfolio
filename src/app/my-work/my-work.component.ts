@@ -43,6 +43,12 @@ export class MyWorkComponent implements OnInit {
       'description': 'Angular-based web-app with multiplayer function',
       'image': 'cards.jpg',
       'url': 'https://king-is-death.web-site24.de'
+    },
+    {
+      'name': 'Dr. Search',
+      'description': 'Angular-based web-app, small copy of Jameda',
+      'image': 'dr_search.jpg',
+      'url': 'https://doctor-database.web-site24.de/'
     }
 
   ];
