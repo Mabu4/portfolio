@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -14,6 +13,26 @@ import { ImprintAndPrivacyComponent } from './imprint-and-privacy/imprint-and-pr
 import { HomeComponent } from './home/home.component';
 import { SuccessComponent } from './success/success.component';
 import { InViewportModule } from 'ng-in-viewport';
+import { FormsModule } from '@angular/forms';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModuleConfig } from '@ngx-translate/core/public_api';
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
+const config: TranslateModuleConfig = {
+  loader: {
+    provide: TranslateLoader,
+    useFactory: HttpLoaderFactory,
+    deps: [HttpClient],
+  },
+  defaultLanguage: 'en',
+};
 
 @NgModule({
   declarations: [
@@ -27,12 +46,16 @@ import { InViewportModule } from 'ng-in-viewport';
     FooterComponent,
     ImprintAndPrivacyComponent,
     HomeComponent,
-    SuccessComponent
+    SuccessComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    InViewportModule
+    InViewportModule,
+    FormsModule,
+    HttpClientModule,
+    TranslateModule.forRoot(config)
+    
   ],
   
   providers: [],

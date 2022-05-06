@@ -8,23 +8,43 @@
                     max.budziat@gmx.de
                 </a>
             </p>
-            <form action="../../assets/send_mail/send_mail.php" name="form" method="post" required>
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
                 <div class="form-container">
-                    <label class="padding-bottom-s padding-top-s paragraph" for="name">Name</label>
-                    <input required type="text" name="name" id="name" placeholder="Enter your name">
+                    <label  class="padding-bottom-s padding-top-s paragraph" for="name">Name</label>
+                    <input 
+                        required
+                        type="text" 
+                        name="name" 
+                        id="name" 
+                        placeholder="Enter your name"
+                        [(ngModel)]="contact.name"
+                        #name="ngModel"
+                    />
                     <label class="padding-bottom-s padding-top-s paragraph" for="email">Email address</label>
-                    <input required type="email" name="email" id="email" placeholder="Enter your Email address">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Enter your Email address"
+                        [(ngModel)]="contact.email"
+                        #email="ngModel"
+                    />
                     <label class="padding-bottom-s padding-top-s paragraph" for="text">Message</label>
-                    <textarea required name="text" id="text" placeholder="Enter your message"></textarea>
+                    <textarea 
+                        required
+                        name="message" 
+                        id="text" 
+                        placeholder="Enter your message"
+                        [(ngModel)]="contact.message"
+                        #message="ngModel"
+                    >
+                    </textarea>
                     <div>
                         <button type="submit" class="button-green paragraph">Send</button>
                     </div>
                 </div>
-                
             </form>
-
         </div>
-        
     </div>
 </div>
 
