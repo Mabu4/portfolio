@@ -8,37 +8,24 @@
                     max.budziat@gmx.de
                 </a>
             </p>
-            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+            <form name="form" action="../../assets/send_mail/send_mail.php" method="post" required>
                 <div class="form-container">
                     <label  class="padding-bottom-s padding-top-s paragraph" for="name">Name</label>
                     <input 
                         required
-                        type="text" 
+                        type="text"
                         name="name" 
                         id="name" 
                         placeholder="Enter your name"
-                        [(ngModel)]="contact.name"
-                        #name="ngModel"
                     />
                     <label class="padding-bottom-s padding-top-s paragraph" for="email">Email address</label>
                     <input 
-                        type="email" 
-                        name="email" 
-                        id="email" 
+                        type="email"
+                        name="email"  
                         placeholder="Enter your Email address"
-                        [(ngModel)]="contact.email"
-                        #email="ngModel"
                     />
-                    <label class="padding-bottom-s padding-top-s paragraph" for="text">Message</label>
-                    <textarea 
-                        required
-                        name="message" 
-                        id="text" 
-                        placeholder="Enter your message"
-                        [(ngModel)]="contact.message"
-                        #message="ngModel"
-                    >
-                    </textarea>
+                    <label class="padding-bottom-s padding-top-s paragraph" for="message">Message</label>
+                    <textarea required placeholder="Enter your message" name="message"></textarea>
                     <div>
                         <button type="submit" class="button-green paragraph">Send</button>
                     </div>
